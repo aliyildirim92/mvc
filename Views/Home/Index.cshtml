@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+    @using (Html.BeginForm("ogrenciKaydet", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="container">
+            <div>
+                <div class="jumbotron">
+                    <h1>Öğrenci Kayıt Sayfası</h1>
+                    <p>Tüm alanlar zorunludur.</p>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Öğrenci Adı:</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" name="Ad" placeholder="Öğrenci Adı" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Öğrenci Soyadı:</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" name="Soyad" placeholder="Öğrenci Soyadı" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Ders Adı:</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" name="Ders" placeholder="Ders Adı" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-3">Ders Notu:</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" name="Not" placeholder="Ders Notu" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-offset-3">
+                    <button class="btn btn-success" type="submit" value="Ekle">Ekle</button>
+                </div>
+            </div>
+        </div>
+    }
+
+</body>
+</html>
